@@ -9,5 +9,6 @@ build:          ## build with native env.
 .PHONY: clean
 clean:          ## Clean build cache.
 	@rm -rf bin
+	@rm -rf lib
 	@rm -rf build
 	@echo "clean [ ok ]"

@@ -1,10 +1,10 @@
 # build & run
 ```
 make
-./bin/lxc
+./bin/lxv
 ```
 
-# lxc
+# lxv
 
 Boot Linux VMs in a single command on macOS using the new [Virtualization.framework](https://developer.apple.com/documentation/virtualization)
 
