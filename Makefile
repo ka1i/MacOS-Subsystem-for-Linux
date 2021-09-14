@@ -14,5 +14,6 @@ sign:	  	    ## sign Macos(must be).
 clean:          ## Clean build cache.
 	@rm -rf bin
 	@rm -rf lib
+	@rm -rf swift
 	@rm -rf build
 	@echo "clean [ ok ]"
