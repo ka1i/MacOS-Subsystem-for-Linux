@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(lxv LANGUAGES Swift)
+project(linux_virtual_machine LANGUAGES Swift)
 
 set(CMAKE_BUILD_TYPE "Release") 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
