@@ -7,5 +7,7 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 add_subdirectory(VirtualizationKit)
 
-add_executable(${PROJECT_NAME} src/hello.swift)
-target_link_libraries(${PROJECT_NAME} PRIVATE HiKit)
+add_executable(${PROJECT_NAME} src/main.swift)
+target_link_libraries(${PROJECT_NAME} PRIVATE VirtualizationKit)
+
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework Foundation Virtualization")

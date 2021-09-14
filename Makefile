@@ -4,7 +4,7 @@ all: build
 build:          ## build with native env.
 	@cmake -B build -GNinja -S .
 	@ninja -C build
-
+	@codesign --entitlements lxv.entitlements -s - ./bin/lxv
 
 .PHONY: clean
 clean:          ## Clean build cache.

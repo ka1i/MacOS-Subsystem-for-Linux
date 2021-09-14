@@ -1,12 +1,19 @@
-# build & run
+# build
 ```
 make
-./bin/lxv
 ```
 
 # lxv
 
 Boot Linux VMs in a single command on macOS using the new [Virtualization.framework](https://developer.apple.com/documentation/virtualization)
+
+
+# Run
++ example:[fedora:34](https://mirrors.ustc.edu.cn/fedora/releases/34/Everything/x86_64/os/images/pxeboot/)
+
+```
+./bin/lxv vmlinuz initrd.img
+```
 
 ## Credits
 
