@@ -1,6 +1,9 @@
 # linux_virtual_machine
 Boot Linux VMs in a single command on macOS using the new [Virtualization.framework](https://developer.apple.com/documentation/virtualization)
 
+## setup
+git clone https://github.com/ka1i/linux-virtual-machine.git --recurse-submodules
+
 ## build
 ```
 make
