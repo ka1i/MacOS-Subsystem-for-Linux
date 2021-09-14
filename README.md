@@ -1,5 +1,6 @@
 # linux_virtual_machine
 Boot Linux VMs in a single command on macOS using the new [Virtualization.framework](https://developer.apple.com/documentation/virtualization)
+[Documentation > Virtualization > Running Linux in a Virtual Machine](https://developer.apple.com/documentation/virtualization/running_linux_in_a_virtual_machine)
 
 ## setup
 ```
