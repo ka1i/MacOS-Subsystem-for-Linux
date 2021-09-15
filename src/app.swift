@@ -17,17 +17,21 @@ struct LinuxVirtualMachine: ParsableCommand {
     @Argument(help: "linux initrd file")
     var initrd: String?
 
+    @Argument(help: "linux storage file")
+    var storage: String?
+
     mutating func run() throws {
         if version {
             showVer()
             return
         }
-        if (kernel != nil) && (initrd != nil) {
-            if let k = kernel,let i = initrd {
+        if (kernel != nil) && (initrd != nil) && (storage != nil) {
+            if let k = kernel, let i = initrd, let s = storage{
                 let vmlinuz = URL(fileURLWithPath: k, isDirectory: false)
-                let rootfs = URL(fileURLWithPath: i, isDirectory: false)
+                let initfs = URL(fileURLWithPath: i, isDirectory: false)
+                let rootfs = URL(fileURLWithPath: s, isDirectory: false)
                 
-                let vs = VirtualSystem(kernel: vmlinuz,initrd: rootfs)
+                let vs = VirtualSystem(kernel: vmlinuz,initrd: initfs,storage: rootfs)
                 vs.configure()
                 vs.system()
             }
