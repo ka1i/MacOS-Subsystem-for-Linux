@@ -28,7 +28,8 @@ struct LinuxVirtualMachine: ParsableCommand {
                 let rootfs = URL(fileURLWithPath: i, isDirectory: false)
                 
                 let vs = VirtualSystem(kernel: vmlinuz,initrd: rootfs)
-                vs.show()
+                vs.configure()
+                vs.system()
             }
         }
     }
