@@ -12,7 +12,7 @@ include(options.cmake)
 add_subdirectory(swift-argument-parser)
 add_subdirectory(VirtualizationKit)
 
-add_executable(${PROJECT_NAME} MACOSX_BUNDLE
+add_executable(${PROJECT_NAME}
   src/app.swift
   src/main.swift
   src/version.swift)
