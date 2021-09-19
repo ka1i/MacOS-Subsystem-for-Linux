@@ -4,7 +4,6 @@ all: build
 build:          ## build with native env.
 	@cmake -B build -GNinja -S .
 	@ninja -C build
-	@make sign
 	
 .PHONY: sign
 sign:	  	    ## sign Macos(must be).

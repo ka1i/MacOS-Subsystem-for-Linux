@@ -25,7 +25,7 @@ jobs:
         echo "RELEASE=lvm_$(git rev-parse --short HEAD).tar.gz" >> $GITHUB_ENV
         echo "VERSION="$(cat .version) >> $GITHUB_ENV
     - name: Gzip
-      run: tar -czvf ${{ env.RELEASE }} -C./bin/ linux_virtual_machine
+      run: tar -czvf ${{ env.RELEASE }} -C./bin/ linux_virtual_machine.app
     - name: Changelog
       uses: glennawatson/ChangeLog@v1
       id: changelog
