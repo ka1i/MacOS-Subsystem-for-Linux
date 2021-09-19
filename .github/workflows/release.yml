@@ -16,7 +16,9 @@ jobs:
         version: 1.10.2
 
     - name: Build
-      run: make build
+      run: |
+        git submodule update --init --recursive
+        make build
     - name: set env
       run: |
         echo "RELEASE=lvm_$(git rev-parse --short HEAD).tar.gz" >> $GITHUB_ENV
