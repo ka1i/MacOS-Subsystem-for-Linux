@@ -9,10 +9,16 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Setup Ninja
+      uses: ashutoshvarma/setup-ninja@master
+      with:
+        version: 1.10.2
 
     - name: Build
+      run: make build
+    - name: set env
       run: |
-        make
         echo "RELEASE=lvm_$(git rev-parse --short HEAD).tar.gz" >> $GITHUB_ENV
         echo "VERSION="$(cat .version) >> $GITHUB_ENV
     - name: Gzip
