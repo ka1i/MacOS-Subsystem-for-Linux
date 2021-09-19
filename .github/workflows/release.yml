@@ -8,9 +8,10 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
+    - name: Checkout repository and submodules
     - uses: actions/checkout@v2
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
+      with:
+        submodules: recursive
     
     - name: Setup Ninja
       uses: ashutoshvarma/setup-ninja@master
