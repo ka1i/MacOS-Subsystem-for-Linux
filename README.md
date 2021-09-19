@@ -15,9 +15,13 @@ make
 
 ## Run
 + example:[fedora:34](https://mirrors.ustc.edu.cn/fedora/releases/34/Everything/x86_64/os/images/pxeboot/)
-
+kernel+initrd+storage
 ```
-./bin/linux_virtual_machine vmlinuz initrd.img
+./bin/linux_virtual_machine -k vmlinuz -i initrd.img -s rootfs.img -c "console=hvc root=/dev/vda"
+```
+kernel+storage
+```
+./bin/linux_virtual_machine run -k vmlinuz -s rootfs.img -c "console=hvc root=/dev/vda"
 ```
 
 ## Credits

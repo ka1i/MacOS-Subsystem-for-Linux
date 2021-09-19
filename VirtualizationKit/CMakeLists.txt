@@ -10,7 +10,13 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_Swift_MODULE_DIRECTORY ${CMAKE_SOURCE_DIR}/swift)
 
 add_library(${PROJECT_NAME} SHARED
-VirtualSystem.swift)
+BootLoader.swift
+Configure.swift
+Delegate.swift
+TerminalSerial.swift
+StorageDevice.swift
+NetworkDevice.swift
+VirtualKit.swift)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
  VERSION 1.0.1

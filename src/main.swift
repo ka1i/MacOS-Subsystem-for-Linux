@@ -1,2 +1,4 @@
-print("LinuxVirtualMachine \(verStr)")
-LinuxVirtualMachine.main()
+import Foundation
+
+let app = App()
+exit(app.lvm())
