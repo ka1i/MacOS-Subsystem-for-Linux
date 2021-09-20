@@ -19,7 +19,7 @@ jobs:
         version: 1.10.2
 
     - name: Build
-      run: make build
+      run: make build && make sign
     - name: set env
       run: |
         echo "RELEASE=linux_virtual_machine_$(git rev-parse --short HEAD).tar.gz" >> $GITHUB_ENV

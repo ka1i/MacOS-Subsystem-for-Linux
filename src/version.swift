@@ -1,6 +1,6 @@
 import ArgumentParser
 
-public var verStr = "v0.0.1"
+public var verStr = "v0.0.2"
 
 public func showVer() {
     print("Author: mardan")

@@ -11,6 +11,7 @@ git clone https://github.com/ka1i/linux-virtual-machine.git --recurse-submodules
 ## build
 ```
 make
+mkae sign
 ```
 
 ## Run

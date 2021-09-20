@@ -53,10 +53,6 @@ struct appRun: ParsableCommand {
     @Flag(name: .shortAndLong, help: "Enable NAT Networking")
     var network: Bool = false
 
-    // if not specified, will generate at random
-    @Option(name: [.customShort("a"), .long], help: "MAC Address")
-    var macaddr: String = ""
-
     @OptionGroup()
     var version: Version
 
