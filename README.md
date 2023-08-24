@@ -6,6 +6,9 @@ Virtualization Docs [Documentation > Virtualization > Running Linux in a Virtual
 ## setup
 ```
 git clone https://github.com/ka1i/linux-virtual-machine.git --recurse-submodules
+# OR
+git submodule update --init --recursive 
+git submodule foreach git pull origin main 
 ```
 
 ## build
